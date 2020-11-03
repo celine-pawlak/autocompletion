@@ -8,6 +8,15 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h4>Nom du site</h4>
+        <section>
+            <input type="search" id="search_barre" name="search_barre">
+            <button id="button_recherche">Rechercher</button>
+        </section>
+    </header>
+    <main>
+        
+    </main>
 </body>
 </html>
