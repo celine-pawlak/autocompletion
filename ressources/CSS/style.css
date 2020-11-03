@@ -1,16 +1,20 @@
 html    
     {
         margin: 0;
+        min-height: 100vh;
     }
 body
     {
         margin: 0;
+        min-height: 100vh;
     }
 /* INDEX */
 #main-index
     {
         display: flex;
-        flex-direction: column;        
+        flex-direction: column;       
+        align-items: center;     
+        min-height: 100vh;
     }
 #section-search-index
     {
@@ -18,12 +22,15 @@ body
         flex-direction: row; 
         align-items: center;       
         width: 70%;
-        height: 20vh;
+        height: 10vh;
+        margin: 20vh 0;
     }
 #search
     {
         height: 100%;
         width: 100%;
+        margin-right: 5vw;
+        border-radius: 5px;
     }
 #button_index
     {        
