@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html    
     {
         margin: 0;
@@ -36,4 +37,33 @@ body
     {        
         height: 5vh;
     }
+=======
+html, body {
+    margin: 0;
+}
+
+/* INDEX */
+#main-index {
+    display: flex;
+    flex-direction: column;
+}
+
+#section-search-index {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    height: 20vh;
+}
+
+#search {
+    height: 100%;
+    width: 100%;
+}
+
+#button_index {
+    height: 5vh;
+}
+
+>>>>>>> 3ce77fd7d51c17e8123b3fe37ed5e2c40264a22d
 /* FIN INDEX */
