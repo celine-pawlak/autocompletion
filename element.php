@@ -16,7 +16,7 @@
             <button id="button_recherche">Rechercher</button>
         </section>
     </header>
-  <main>
+  <main>      
     <section id="section_element">
         <article id="article_element">
             <h3></h3>

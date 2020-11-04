@@ -4,8 +4,8 @@ $db = new Database('autocompletion', 'root');
 $pdo = $db->getPDO();
 
 if(isset($_GET['param']) && $_GET['param']=='getelement')
-    {
-        $id = $_GET['id'];
+    {        
+        $id = $_GET['id'];        
         $error = [];
         $set = [];
         $requete = $pdo->prepare('SELECT id FROM jeux WHERE id=?');
@@ -16,7 +16,7 @@ if(isset($_GET['param']) && $_GET['param']=='getelement')
             {
                 array_push($error, 'Pas la REF');               
             }
-        if(!is_int($id))
+        if(!filter_var($id, FILTER_VALIDATE_INT))
             {
                 array_push($error, 'La valeur n\'est pas correct');
             }
@@ -33,11 +33,8 @@ if(isset($_GET['param']) && $_GET['param']=='getelement')
                 echo $json;
             }
         else
-            {
-                array_push($error, false);
+            {                
                 $json = json_encode($error);
                 echo $json;
-            }
-        
-        
+            }                
     }
