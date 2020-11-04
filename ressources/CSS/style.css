@@ -6,41 +6,44 @@ html, body {
 /* INDEX */
 #main-index {
     display: flex;
-    flex-direction: column;    
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
 }
-#main-index h1
-    {
-        font-size: 60px;
-        font-weight: bold;
-        margin: 5vh 0;
-        color: orange;
-    }
+
+#main-index h1 {
+    font-size: 60px;
+    font-weight: bold;
+    margin: 5vh 0;
+    color: orange;
+}
+
 #section-search-index {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 15vh 0;
     height: 15vh;
     width: 80%;
     font-size: 30px;
-    border: 1px solid black;
     border-radius: 20px;
 }
-#section-search-index:hover 
-    {
-        box-shadow: 5px 5px 10px grey;
-    }
+#section-search-index > input {
+    border: 1px solid black;
+}
+
+#section-search-index:hover {
+    box-shadow: 5px 5px 10px grey;
+}
+
 #search {
     height: 80%;
     width: 80%;
-    font-size: 30px;  
-    margin:0 2vw;
-    border: 0;      
+    font-size: 30px;
+    margin: 0 2vw;
+    border: 0;
     border-radius: 20px;
     outline: none;
-} 
+}
 
 #button_index {
     height: 5vh;
@@ -49,4 +52,14 @@ html, body {
     color: orange;
     background-color: #444444;
 }
+
 /* FIN INDEX */
+
+/* CELINE */
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.w-100{
+    width: 100%;
+}
