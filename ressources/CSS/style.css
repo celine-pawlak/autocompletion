@@ -2,7 +2,14 @@ html, body {
     margin: 0;
     min-height: 100vh;
 }
-
+/* CELINE */
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.w-100{
+    width: 100%;
+}
 /* INDEX */
 #main-index {
     display: flex;
@@ -52,14 +59,29 @@ html, body {
     color: orange;
     background-color: #444444;
 }
-
 /* FIN INDEX */
-
-/* CELINE */
-.flex-column{
-    display: flex;
-    flex-direction: column;
-}
-.w-100{
-    width: 100%;
-}
+/* ELEMENT */
+#section_element
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 10vh;
+        justify-content: space-evenly;
+    }
+#article_element
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 40%;
+    }
+#article_element h3
+    {
+        font-size: 35px;
+    }
+#article_element p 
+    {
+        font-style: italic;
+    }
+/* FIN ELEMENT */

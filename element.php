@@ -6,9 +6,9 @@
     <!-- Font Awesome icons -->
     <script src="https://kit.fontawesome.com/68f3afb94b.js" crossorigin="anonymous"></script>
     <!-- JS & JQUERY -->
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="ressources/JS/script.js"></script>
-    <!-- CSS -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>    
+    <script src="ressources/JS/element.js"></script>
+    <!-- CSS -->    
     <link rel="stylesheet" href="ressources/CSS/style.css">
     <title>Document</title>
 </head>
@@ -20,8 +20,13 @@
             <button id="button_recherche">Rechercher</button>
         </section>
     </header>
-  <main>
-
+  <main>      
+    <section id="section_element">
+        <article id="article_element">
+            <h3></h3>
+            <p></p>
+        </article>
+    </section>
   </main>
 </body>
 </html>
