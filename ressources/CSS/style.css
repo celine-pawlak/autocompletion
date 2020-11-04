@@ -50,3 +50,28 @@ html, body {
     background-color: #444444;
 }
 /* FIN INDEX */
+/* ELEMENT */
+#section_element
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 10vh;
+        justify-content: space-evenly;
+    }
+#article_element
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 40%;
+    }
+#article_element h3
+    {
+        font-size: 35px;
+    }
+#article_element p 
+    {
+        font-style: italic;
+    }
+/* FIN ELEMENT */
