@@ -5,12 +5,12 @@ $db = new Database('autocompletion', 'root');
 $pdo = $db->getPDO();
 
 function nestedLowercase($value)
-{
-    if (is_array($value)) {
-        return array_map('nestedLowercase', $value);
+    {
+        if (is_array($value)) {
+            return array_map('nestedLowercase', $value);
+        }
+        return utf8_encode(strtolower(utf8_decode($value)));
     }
-    return utf8_encode(strtolower(utf8_decode($value)));
-}
 
 if (isset($_GET['param']) and $_GET['param'] == 'searchbar') {
 }
@@ -28,7 +28,7 @@ if (!isset($allgames)) {
 }
 // Gère l'envoie des données de l'élément séléctionner
 if(isset($_GET['param']) && $_GET['param']=='getelement')
-    {        
+    {      
         $id = $_GET['id'];        
         $error = [];
         $set = [];
