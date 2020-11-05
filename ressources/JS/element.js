@@ -1,6 +1,11 @@
 $(function()
     {
-        var id ='6';      
+        var url = document.location.href;
+        var id1 = url.charAt(url.length-1);   
+        var id2 = url.charAt(url.length-2);
+         
+        var id = getId(id1, id2);
+            
                 $.ajax(
                     {
                         url : 'API/indexAPI.php',
