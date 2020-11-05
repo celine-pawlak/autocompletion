@@ -14,7 +14,7 @@ function nestedLowercase($value)
 
 if (isset($_GET['param']) and $_GET['param'] == 'searchbar') {
     if (!isset($allgames)) {
-        $allgames = $pdo->query("SELECT * FROM test")->fetchAll(PDO::FETCH_ASSOC);
+        $allgames = $pdo->query("SELECT * FROM games")->fetchAll(PDO::FETCH_ASSOC);
         $search = strtolower($_POST['search']);
         $matches = [];
         $allgameslower = array_map('nestedLowercase', $allgames);
