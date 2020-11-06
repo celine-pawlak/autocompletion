@@ -106,6 +106,26 @@ main
         font-style: italic;        
         width: 40%;
     }
+@media screen and (min-width: 600px) and (max-width: 900px)
+    {
+        
+    }
+@media screen and (max-width: 640px)
+    {
+        #article_element
+            {
+                display: flex;
+                flex-direction: column-reverse;        
+                justify-content: space-around;
+                align-items: center;
+                /* text-align: center; */
+                width: 100%;
+            }
+        #article_element p 
+            {
+                margin-top: 3vh;
+            }
+    }
 /* FIN ELEMENT */
 /* HEADER */
 header

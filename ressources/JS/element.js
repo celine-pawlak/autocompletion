@@ -24,7 +24,7 @@ $(function()
                                     }
                                 else    
                                     {
-                                        $('#article_element h3').html("Nous n'avons pas cette référence");                                        
+                                        $('#titre_jeu').html("Nous n'avons pas cette référence");                                        
                                         for(let i = 0; i<data.length; i++)
                                             {
                                                 $('#article_element').append('<p>'+data[i]+'</p>');
