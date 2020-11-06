@@ -21,13 +21,13 @@
             <button id="button_recherche">Rechercher</button>
         </section>
     </header>
-  <main>      
-    <section id="section_element">
-        <article id="article_element">
-            <h3></h3>
-            <p></p>
-        </article>
-    </section>
+    <main id="main_element">      
+        <section id="section_element" class="container">
+            <h3 id="titre_jeu"></h3>
+            <article id="article_element">
+                <p></p>
+            </article>
+        </section>
   </main>
 </body>
 </html>

@@ -18,8 +18,8 @@ $(function()
                                 if(data[1] === true)
                                     {
                                         let chemin = 'images/'+data[0].chemin+'.jpg';                        
-                                        $('#section_element').append('<img src="'+chemin+'" alt="cover de '+data[0].nom+'">');
-                                        $('#article_element h3').html(data[0].nom);
+                                        $('#article_element').append('<img src="'+chemin+'" alt="cover de '+data[0].nom+'">');
+                                        $('#titre_jeu').html(data[0].nom);
                                         $('#article_element p').html(data[0].description);
                                     }
                                 else    
