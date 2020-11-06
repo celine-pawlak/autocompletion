@@ -12,15 +12,18 @@
     <link rel="stylesheet" href="ressources/CSS/style.css">
     <title></title>
 </head>
-<body>
+<body>    
     <header>
-        <h4>Nom du site</h4>
+        <section id="nom_jeu">
+            <i class="fas fa-gamepad" id="logo-manette"></i>&nbsp;            
+            <h4><span id="titre-partie">Game</span> Search</h4>
+        </section>
         <section>
             <input type="search" id="search_barre" name="search_barre">
-            <button id="button_recherche">Rechercher</button>
+            <i class="fas fa-search"></i>
         </section>
-    </header>
-    <main>
+    </header>    
+    <main class="container">
         
     </main>
 </body>
