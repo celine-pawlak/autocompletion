@@ -16,6 +16,11 @@ main
         margin-left: auto;    
         background-color: white;  
     }
+.lead 
+    {
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
 /* CELINE */
 .flex-column{
     display: flex;
@@ -102,3 +107,50 @@ main
         width: 40%;
     }
 /* FIN ELEMENT */
+/* HEADER */
+header
+    {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+    }
+#nom_jeu
+    {
+        display: flex;
+        align-items: center;
+    }
+.fa-gamepad
+    {
+        display: flex;
+        align-items: center;
+        font-size: 45px;        
+        color: #FF5500;
+    }
+.fa-search
+    {
+        display: flex;
+        align-items: center;
+        font-size: 30px;        
+        color: #FF5500;
+    }
+#nom_jeu h4
+    {
+        font-size: 40px;
+        margin: 3vh 0;
+        color: #FF5500;
+    }
+#titre-partie
+    {
+        color: white;
+    }
+#search_barre
+    {
+        border: 0;
+        outline: none;
+        border-bottom: 3px solid #FF5500;
+        background-color: black;
+        color: white;
+        font-size: 25px;
+    }
+/* FIN HEADER */

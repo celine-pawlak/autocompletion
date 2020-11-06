@@ -15,17 +15,20 @@
 </head>
 <body>
     <header>
-        <h4>Nom du site</h4>
+        <section id="nom_jeu">
+            <i class="fas fa-gamepad" id="logo-manette"></i>&nbsp;            
+            <h4><span id="titre-partie">Game</span> Search</h4>
+        </section>
         <section>
             <input type="search" id="search_barre" name="search_barre">
-            <button id="button_recherche">Rechercher</button>
+            <i class="fas fa-search"></i>
         </section>
     </header>
     <main id="main_element">      
         <section id="section_element" class="container">
             <h3 id="titre_jeu"></h3>
             <article id="article_element">
-                <p></p>
+                <p class="lead"></p>
             </article>
         </section>
   </main>
