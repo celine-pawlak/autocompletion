@@ -11,7 +11,40 @@ function nestedLowercase($value)
         }
         return utf8_encode(strtolower(utf8_decode($value)));
     }
+/**
+ * Récupère $nombre d'élément dans une table sans prendre en compte $id
+ * @param mixed $pdo connexion à la bdd 
+ * @param number $id id que l'on ne veut pas dans le résultat
+ * @param number $nombre de résultat souhaité
+ * @param string $table table dans laquelle faire la requête
+ * @return mixed un tableau avec toutes les infos des résultats
+ */
+function randomSuggest ($pdo, $id, $nombre, $table)
+    {
+        $req1 = $pdo->query("SELECT id FROM $table");
+        $recupId = $req1->fetchAll(PDO::FETCH_ASSOC);
+        $allId= [];
+        $idSuggest = [];        
+        foreach($recupId as $index => $idTable)
+            {
+                array_push($allId, $idTable['id']) ;
+            }       
+        unset($allId[array_search($id, $allId)]);
+            
+        $random = array_rand($allId, $nombre);
 
+        foreach($random as $k => $v)
+            {    
+                array_push($idSuggest, $allId[$v]);          
+            }
+
+        $req2 = $pdo->prepare("SELECT * FROM $table WHERE id IN (?,?,?)");
+        $req2->execute([$idSuggest[0], $idSuggest[1], $idSuggest[2]]);
+        $suggestion = $req2->fetchAll(PDO::FETCH_ASSOC);
+        return $suggestion;
+    }
+
+    var_dump(randomSuggest($pdo, 4, 3, 'games'));
 if (isset($_GET['param']) and $_GET['param'] == 'searchbar') {
     if (!isset($allgames)) {
         $allgames = $pdo->query("SELECT * FROM games")->fetchAll(PDO::FETCH_ASSOC);
@@ -50,7 +83,11 @@ if(isset($_GET['param']) && $_GET['param']=='getelement')
                 $req = $pdo->prepare('SELECT * FROM jeux WHERE id=?');
                 $req->execute([$id]);
                 $element = $req->fetch();
+
+                // randomSuggest($pdo, $id);
+                var_dump(randomSuggest($pdo, $id));
                 
+                //  array_push($set, $suggestion);
                 array_push($set, $element);
                 array_push($set, true);
 
