@@ -24,15 +24,15 @@
             <i class="fas fa-search"></i>
         </section>
     </header>
-    <main id="main_element">      
-        <section id="section_element" class="container">
+    <main id="main_element" class="container">      
+        <section id="section_element">
             <h3 id="titre_jeu"></h3>
             <article id="article_element">
                 <p class="lead"></p>
             </article>
         </section> 
-        <section class="container" id="suggestion">
-            
+        <section id="suggestion">
+            <h4>Suggestions</h4>
         </section>
   </main>
 </body>

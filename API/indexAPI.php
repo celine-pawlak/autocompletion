@@ -66,7 +66,7 @@ if(isset($_GET['param']) && $_GET['param']=='getelement')
         $id = $_GET['id'];        
         $error = [];
         $set = [];
-        $requete = $pdo->prepare('SELECT id FROM jeux WHERE id=?');
+        $requete = $pdo->prepare('SELECT id FROM games WHERE id=?');
         $requete->execute([$id]);
         $isInBdd = $requete->fetch();        
 
@@ -80,7 +80,7 @@ if(isset($_GET['param']) && $_GET['param']=='getelement')
             }
         if(empty($error))
             {                            
-                $req = $pdo->prepare('SELECT * FROM jeux WHERE id=?');
+                $req = $pdo->prepare('SELECT * FROM games WHERE id=?');
                 $req->execute([$id]);
                 $element = $req->fetch();
         

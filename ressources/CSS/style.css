@@ -84,7 +84,7 @@ main
         display: flex;
         flex-direction: column;        
         align-items: center;        
-        min-height: 100vh;
+        min-height: auto;
     }
 #titre_jeu
     {
