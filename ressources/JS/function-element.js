@@ -9,3 +9,8 @@ function getId(id1, id2)
         else
             return id1;
     }    
+
+function goElement (valeur)
+    {
+        console.log(valeur);
+    }
