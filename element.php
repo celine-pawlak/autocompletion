@@ -28,11 +28,13 @@
         <section id="section_element">
             <h3 id="titre_jeu"></h3>
             <article id="article_element">
+                <div></div>
                 <p class="lead"></p>
             </article>
         </section> 
         <section id="suggestion">
             <h4>Suggestions</h4>
+            <section></section>
         </section>
   </main>
 </body>

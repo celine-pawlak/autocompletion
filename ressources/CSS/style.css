@@ -94,7 +94,7 @@ main
 #article_element
     {
         display: flex;
-        flex-direction: row-reverse;        
+        flex-direction: row;        
         justify-content: space-around;
         text-align: center;
         width: 100%;
@@ -125,6 +125,11 @@ main
             {
                 margin-top: 3vh;
             }
+    }
+#suggestion section
+    {
+        display: flex;    
+        justify-content: space-evenly;    
     }
 /* FIN ELEMENT */
 /* HEADER */
