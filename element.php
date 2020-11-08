@@ -30,6 +30,9 @@
             <article id="article_element">
                 <p class="lead"></p>
             </article>
+        </section> 
+        <section class="container" id="suggestion">
+            
         </section>
   </main>
 </body>
