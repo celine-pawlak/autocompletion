@@ -44,7 +44,7 @@ function randomSuggest ($pdo, $id, $nombre, $table)
         return $suggestion;
     }
 
-    var_dump(randomSuggest($pdo, 4, 3, 'games'));
+    
 if (isset($_GET['param']) and $_GET['param'] == 'searchbar') {
     if (!isset($allgames)) {
         $allgames = $pdo->query("SELECT * FROM games")->fetchAll(PDO::FETCH_ASSOC);
@@ -83,13 +83,10 @@ if(isset($_GET['param']) && $_GET['param']=='getelement')
                 $req = $pdo->prepare('SELECT * FROM jeux WHERE id=?');
                 $req->execute([$id]);
                 $element = $req->fetch();
-
-                // randomSuggest($pdo, $id);
-                var_dump(randomSuggest($pdo, $id));
-                
-                //  array_push($set, $suggestion);
+        
                 array_push($set, $element);
                 array_push($set, true);
+                array_push($set, randomSuggest($pdo, $id, 3, 'games'));
 
                 $json = json_encode($set);        
                 echo $json;
