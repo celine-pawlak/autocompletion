@@ -19,8 +19,7 @@ function ajax($page, $type, $val, $param, $isset)
                 data : {id : $val, param : $param},
                 dataType : 'json',
                 success : (data) =>
-                    {          
-                        console.log(data);  
+                    {                                  
                         if(data[1] === true)
                             {
                                 let chemin = 'images/'+data[0].path+'.jpg';                        
@@ -50,7 +49,7 @@ function ajax($page, $type, $val, $param, $isset)
                                 $('.elementSug').click(function()
                                     {
                                         let nexId = $(this).attr('id');                                                         
-                                        ajax('API/indexAPI.php', 'GET', nexId, 'suggest', true);                                        
+                                        ajax('API/indexAPI.php', 'GET', nexId, 'getelement', true);                                        
                                     });
                             }
                         else    
