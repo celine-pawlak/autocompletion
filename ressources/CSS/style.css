@@ -29,6 +29,9 @@ main
 .w-100{
     width: 100%;
 }
+.clickable{
+    cursor: pointer;
+}
 /* INDEX */
 #main-index {
     display: flex;

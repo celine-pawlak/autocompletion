@@ -1,3 +1,9 @@
+function redirectGame() {
+	var id_game = this.id;
+	console.log(id_game);
+	window.location = "element.php" + id_game;
+}
+
 $(function () {
 	$('#search').keyup(function () {
 		var searchValue = $(this).val();
@@ -7,13 +13,12 @@ $(function () {
 			data: {search: searchValue},
 			dataType: "json",
 			success: (data) => {
-				console.log(data);
 				$('#search_results').html('');
 				for (let i = 0; (i < data.length) && (i < 5); i++) {
-					$('#search_results').append('<input id="game' + data[i].id + '" value="' + data[i].name + '" disabled>');
-					console.log(data[i]);
+					$('#search_results').append('<button class="game_input clickable" id="?jeuid=' + data[i].id + '">' + data[i].name + '</button>');
 				}
 			}
 		})
 	})
+	$('#search_results').on('click', '.game_input', redirectGame);
 });
