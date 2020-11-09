@@ -34,17 +34,23 @@ function ajax($page, $type, $val, $param, $isset)
                                             {                        
                                                 $('#suggestion section').append('<div id="sug'+i+'"></div>');
                                                 $('#sug'+i).append('<p class="elementSug" id='+data[2][i].id+'>'+data[2][i].name+'</p>');                                                
-                                                $('#sug'+i).append('<img src="images/'+data[2][i].path+'.jpg" alt="cover de '+data[2][i].name+'" class="elementSug" id='+data[2][i].id+'>');                                                        
-                                                // $('#sug'+i+' p').html('<p class="elementSug" id='+data[2][i].id+'>'+data[2][i].name+'</p>');
-                                                // $('#sug'+i+' img').attr('src', 'images/'+data[2][i].path+'.jpg');
-                                                // $('#sug'+i+' img').attr('alt', data[2][i].name);
+                                                $('#sug'+i).append('<img src="images/'+data[2][i].path+'.jpg" alt="cover de '+data[2][i].name+'" class="elementSug" id='+data[2][i].id+'>');                                                                                                        
+                                            }
+                                    }
+                                else
+                                    {                 
+                                        $('#suggestion section').empty();                       
+                                        for(let j = 0; j<data[2].length; j++)                                      
+                                            {                                                         
+                                                $('#suggestion section').append('<div id="sug'+j+'"></div>');
+                                                $('#sug'+j).append('<p class="elementSug" id='+data[2][j].id+'>'+data[2][j].name+'</p>');                                                
+                                                $('#sug'+j).append('<img src="images/'+data[2][j].path+'.jpg" alt="cover de '+data[2][j].name+'" class="elementSug" id='+data[2][j].id+'>');
                                             }
                                     }
                                 $('.elementSug').click(function()
                                     {
-                                        let nexId = $(this).attr('id');
-                                        ajax('API/indexAPI.php', 'GET', nexId, 'getelement');
-                                        // goElement(id);//récursive
+                                        let nexId = $(this).attr('id');                                                         
+                                        ajax('API/indexAPI.php', 'GET', nexId, 'suggest', true);                                        
                                     });
                             }
                         else    
