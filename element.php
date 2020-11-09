@@ -36,6 +36,9 @@
             <h4>Suggestions</h4>
             <section></section>
         </section>
-  </main>
+    </main>
+    <footer>
+        <p><span class="span-footer">autocomplétion</span> @2020 - Céline Pawlak & Martin Bozon</p>
+    </footer>
 </body>
 </html>

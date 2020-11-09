@@ -106,9 +106,13 @@ main
         font-style: italic;        
         width: 40%;
     }
-@media screen and (min-width: 600px) and (max-width: 900px)
+@media screen and (min-width: 600px) and (max-width: 1200px)
     {
-        
+        #suggestion section
+            {                
+                flex-wrap: wrap;
+                align-items: center;
+            }
     }
 @media screen and (max-width: 640px)
     {
@@ -125,11 +129,27 @@ main
             {
                 margin-top: 3vh;
             }
+        #suggestion section
+            {
+                flex-direction: column;
+            }
     }
 #suggestion section
     {
         display: flex;    
-        justify-content: space-evenly;    
+        justify-content: space-evenly;   
+        padding-bottom: 5vh; 
+    }
+#suggestion h4  
+    {
+        text-align: center;
+        font-size: 35px;
+    }
+.elementSug
+    {
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
     }
 /* FIN ELEMENT */
 /* HEADER */
@@ -179,3 +199,18 @@ header
         font-size: 25px;
     }
 /* FIN HEADER */
+/* FOOTER */
+footer
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 8vh;
+        background-color: black;
+        color: white;        
+    }
+.span-footer
+    {
+        color: #FF5500;
+    }
+/* FIN FOOTER */
