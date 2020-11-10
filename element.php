@@ -28,8 +28,8 @@
         <section id="section_element">
             <h3 id="titre_jeu"></h3>
             <article id="article_element">
-                <div></div>
-                <p class="lead" id="description"></p>
+                <!-- <img src="" alt="" id="image_element">
+                <p class="lead" id="description"></p> -->
             </article>
         </section> 
         <section id="suggestion">        

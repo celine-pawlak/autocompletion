@@ -21,6 +21,10 @@ main
         font-size: 1.25rem;
         font-weight: 300;
     }
+img 
+    {
+        box-shadow: 5px 5px 10px gray;
+    }
 /* CELINE */
 .flex-column{
     display: flex;
@@ -102,7 +106,8 @@ main
 #article_element p 
     {
         display: flex;
-        align-items: center;
+        justify-content: center;
+        align-items: center;        
         font-style: italic;        
         width: 40%;
     }
@@ -127,7 +132,7 @@ main
             }
         #article_element p 
             {
-                margin-top: 3vh;
+                margin-top: 3vh;                
             }
         #suggestion section
             {

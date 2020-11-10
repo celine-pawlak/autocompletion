@@ -16,9 +16,9 @@ function getId(id1, id2)
             return id1;
     }    
 /**
- * 
- * @param {*} $data 
- * @param {*} $isset 
+ * Affiche les suggestions
+ * @param {*} $data Tableau contenant les valeurs à afficher
+ * @param {*} $isset si = true : remplace le premier affichage, si = false : crée un premier affichage
  */
 function GetSuggest ($data, $isset)
     {
@@ -43,7 +43,7 @@ function GetSuggest ($data, $isset)
             }
     }
 /**
- * Génère l'élément en fonction de la $val demandé et affiche des suggestions (sans la $val)
+ * Génère l'élément en fonction de la $val demandé et affiche des suggestions même si message $val inconnue (sans la $val)
  * @param {*} $page page vers laquelle envoyer l'ajax
  * @param {*} $type get ou post
  * @param {*} $val ici un id
@@ -61,9 +61,10 @@ function ajax($page, $type, $val, $param, $isset)
                 success : (data) =>
                     {             
                         console.log(data);          
-                        //Si l'id existe alors on affiche l'élément | Suggestions toujours affichées                                              
+                        //Si l'id existe alors on affiche l'élément                                         
                         if(data[1] === true)
                             {              
+                                $('#titre_jeu').html(data[0].name);
                                 $('#article_element').remove();
                                 $('#section_element').append('<div id="article_element"></div>');
                                 let chemin = 'images/'+data[0].path+'.jpg';                   
@@ -79,7 +80,7 @@ function ajax($page, $type, $val, $param, $isset)
                                         ajax('API/indexAPI.php', 'GET', nexId, 'getelement', true);                                         
                                     });
                             }
-                        //Si l'id n'existe pas on affiche les erreurs | Suggestions toujours affichées
+                        //Si l'id n'existe pas on affiche les erreurs 
                         else    
                             {
                                 $('#titre_jeu').html("Nous n'avons pas cette référence"); 
