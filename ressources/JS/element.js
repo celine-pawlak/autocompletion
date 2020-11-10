@@ -10,7 +10,7 @@ $(function()
       
         $(window).scroll(function() 
             {
-                ScrollToTop();
+                ScrollToTop(250, 0, 500);
                 StopAnimation();
             });                             
     })

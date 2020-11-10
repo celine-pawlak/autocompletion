@@ -15,6 +15,11 @@ function getId(id1, id2)
         else
             return id1;
     }    
+/**
+ * 
+ * @param {*} $data 
+ * @param {*} $isset 
+ */
 function GetSuggest ($data, $isset)
     {
         if($isset === false)
@@ -56,37 +61,39 @@ function ajax($page, $type, $val, $param, $isset)
                 success : (data) =>
                     {             
                         console.log(data);          
-                        //Si l'id existe alors on affiche l'élément                                                  
+                        //Si l'id existe alors on affiche l'élément | Suggestions toujours affichées                                              
                         if(data[1] === true)
                             {              
-                                $('#article_element p').remove();
-                                let chemin = 'images/'+data[0].path+'.jpg';                        
-                                $('#article_element div').html('<img src="'+chemin+'" alt="cover de '+data[0].name+'">');
-                                $('#titre_jeu').html(data[0].name);
-                                $('#article_element').append('<p class=lead>'+data[0].description+'</p>');
+                                $('#article_element').remove();
+                                $('#section_element').append('<div id="article_element"></div>');
+                                let chemin = 'images/'+data[0].path+'.jpg';                   
+                                $('#article_element').append('<img src="'+chemin+'" alt="Cover de '+data[0].name+'"/>');
+                                $('#article_element').append('<p class="lead">'+data[0].description+'</p>');                                
                                 
                                 GetSuggest(data[2], $isset);
                                 
                                 $('.elementSug').click(function()
-                                    {
+                                    {                                        
                                         $("html, body").animate({ scrollTop: 0 }, 500);
                                         let nexId = $(this).attr('id');                                                         
                                         ajax('API/indexAPI.php', 'GET', nexId, 'getelement', true);                                         
                                     });
                             }
-                        //Si l'id n'existe pas on affiche les erreurs
+                        //Si l'id n'existe pas on affiche les erreurs | Suggestions toujours affichées
                         else    
                             {
-                                $('#titre_jeu').html("Nous n'avons pas cette référence");  
+                                $('#titre_jeu').html("Nous n'avons pas cette référence"); 
+                                $('#article_element p').remove();                                  
                                 if(data.length===2)
                                     {
                                         for(let i = 0; i<data.length-1; i++)
                                             {
-                                                $('#article_element').append('<p>'+data[i]+'</p>');
+                                                $('#article_element').append('<p class="lead">'+data[i]+'</p>');
                                             }                                        
                                         GetSuggest(data[data.length-1], $isset);
+
                                         $('.elementSug').click(function()
-                                            {
+                                            {                                                
                                                 $("html, body").animate({ scrollTop: 0 }, 500);
                                                 let nexId = $(this).attr('id');                                                         
                                                 ajax('API/indexAPI.php', 'GET', nexId, 'getelement', true);                                         
@@ -96,11 +103,12 @@ function ajax($page, $type, $val, $param, $isset)
                                     {
                                         for(let i = 0; i<data.length-1; i++)
                                             {
-                                                $('#article_element').append('<p>'+data[i]+'</p>');
+                                                $('#article_element').append('<p class="lead">'+data[i]+'</p>');
                                             }
                                         GetSuggest(data[data.length-1], $isset);
+
                                         $('.elementSug').click(function()
-                                            {
+                                            {                                                
                                                 $("html, body").animate({ scrollTop: 0 }, 500);
                                                 let nexId = $(this).attr('id');                                                         
                                                 ajax('API/indexAPI.php', 'GET', nexId, 'getelement', true);                                         
@@ -112,12 +120,15 @@ function ajax($page, $type, $val, $param, $isset)
     }
 
 /**
- * Affiche le bouton retour en haut de page, et si on click sur ce bouton, ramène l'utilisateur en haut de page
+ * Affiche le bouton retour en haut de page lorsqu'on dépasse $pixel, et si on click sur ce bouton, ramène l'utilisateur en haut de page
+ * @param {number} $pixel Nombre de pixel au top de l'écran avant d'afficher le bouton
+ * @param {number} $valeurTop Jusqu'où on veut remonter
+ * @param {number} $vitesse Vitesse de défilement de la page
  */
-function ScrollToTop()
+function ScrollToTop($pixel, $valeurTop, $vitesse)
     {
         var s = $(window).scrollTop();        
-        if (s > 250) 
+        if (s > $pixel) 
             {
                 $('.scrollup').fadeIn();
             } 
@@ -128,7 +139,7 @@ function ScrollToTop()
         
         $('.scrollup').click(function () 
             {
-                $("html, body").animate({ scrollTop: 0 }, 500);
+                $("html, body").animate({ scrollTop: $valeurTop }, $vitesse);
                 return false;
             });
     }
