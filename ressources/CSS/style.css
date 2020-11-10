@@ -164,7 +164,7 @@ img
         bottom: 50px;
         right: 50px;
         display: none;
-        color: black;
+        color: #FF5500;
         background-color: rgba(255, 255, 255, 0.582);
         border: 1px solid #3a3f51;
         border-radius: 5px;
@@ -175,7 +175,7 @@ img
      
 .scrollup:hover 
     {
-        color: #FF5500;
+        color: black;
     }
 /* FIN ELEMENT */
 /* HEADER */
