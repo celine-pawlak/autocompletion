@@ -151,6 +151,27 @@ main
         font-size: 25px;
         font-weight: bold;
     }
+.scrollup 
+    {
+        width: 40px;
+        height: 40px;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        display: none;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.582);
+        border: 1px solid #3a3f51;
+        border-radius: 5px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 37px;
+    }
+     
+.scrollup:hover 
+    {
+        color: #FF5500;
+    }
 /* FIN ELEMENT */
 /* HEADER */
 header

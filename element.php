@@ -29,13 +29,14 @@
             <h3 id="titre_jeu"></h3>
             <article id="article_element">
                 <div></div>
-                <p class="lead"></p>
+                <p class="lead" id="description"></p>
             </article>
         </section> 
-        <section id="suggestion">
+        <section id="suggestion">        
             <h4>Suggestions</h4>
             <section></section>
         </section>
+        <a href="#" title="Haut de page" class="scrollup"><i class="fa fa-arrow-up"></i></a>
     </main>
     <footer>
         <p><span class="span-footer">autocomplétion</span> @2020 - Céline Pawlak & Martin Bozon</p>

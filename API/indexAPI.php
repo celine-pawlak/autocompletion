@@ -93,6 +93,7 @@ if(isset($_GET['param']) && $_GET['param']=='getelement')
             }
         else
             {                
+                array_push($error, randomSuggest($pdo, $id, 3, 'games'));  
                 $json = json_encode($error);
                 echo $json;
             }                

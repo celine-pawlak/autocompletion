@@ -6,5 +6,11 @@ $(function()
          
         var id = getId(id1, id2);
 
-        ajax('API/indexAPI.php', 'GET', id, 'getelement', false);                           
+        ajax('API/indexAPI.php', 'GET', id, 'getelement', false);                    
+      
+        $(window).scroll(function() 
+            {
+                ScrollToTop();
+                StopAnimation();
+            });                             
     })
