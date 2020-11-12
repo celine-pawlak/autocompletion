@@ -210,6 +210,10 @@ header
         display: flex;
         align-items: center;
     }
+#barre-nav
+    {
+        display: flex;        
+    }
 .fa-gamepad
     {
         display: flex;
@@ -242,6 +246,31 @@ header
         background-color: black;
         color: white;
         font-size: 25px;
+    }
+@media screen and (max-width: 640px)
+    {
+        .fa-gamepad
+            {                
+                font-size: 25px;                        
+            }
+        .fa-search
+            {
+                display: flex;
+                align-items: center;
+                font-size: 20px;        
+                color: #FF5500;
+            }
+        #nom_jeu h4
+            {
+                font-size: 20px;
+                margin: 3vh 0;
+                color: #FF5500;
+            }
+        #search_barre
+            {
+                width: 25vw;
+                font-size: 15px
+            }
     }
 /* FIN HEADER */
 /* FOOTER */
