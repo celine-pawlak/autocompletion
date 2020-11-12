@@ -19,7 +19,7 @@
             <i class="fas fa-gamepad" id="logo-manette"></i>&nbsp;            
             <h4><span id="titre-partie">Game</span> Search</h4>
         </section>
-        <section>
+        <section id="barre-nav">
             <input type="search" id="search_barre" name="search_barre">
             <i class="fas fa-search"></i>
         </section>
