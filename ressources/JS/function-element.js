@@ -92,7 +92,7 @@ function ajax($page, $type, $val, $param, $isset)
                                                 $('#article_element').append('<p class="lead">'+data[i]+'</p>');
                                             }                                        
                                         GetSuggest(data[data.length-1], $isset);
-
+                                        
                                         $('.elementSug').click(function()
                                             {                                                
                                                 $("html, body").animate({ scrollTop: 0 }, 500);
@@ -107,7 +107,7 @@ function ajax($page, $type, $val, $param, $isset)
                                                 $('#article_element').append('<p class="lead">'+data[i]+'</p>');
                                             }
                                         GetSuggest(data[data.length-1], $isset);
-
+                                        
                                         $('.elementSug').click(function()
                                             {                                                
                                                 $("html, body").animate({ scrollTop: 0 }, 500);
