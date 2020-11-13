@@ -19,7 +19,7 @@
             <i class="fas fa-gamepad" id="logo-manette"></i>&nbsp;            
             <h4><span id="titre-partie">Game</span> Search</h4>
         </section>
-        <section>
+        <section id="barre-nav">
             <input type="search" id="search_barre" name="search_barre">
             <i class="fas fa-search"></i>
         </section>
@@ -28,14 +28,18 @@
         <section id="section_element">
             <h3 id="titre_jeu"></h3>
             <article id="article_element">
-                <div></div>
-                <p class="lead"></p>
+                <!-- <img src="" alt="" id="image_element">
+                <p class="lead" id="description"></p> -->
             </article>
         </section> 
-        <section id="suggestion">
+        <section id="suggestion">        
             <h4>Suggestions</h4>
             <section></section>
         </section>
-  </main>
+        <a href="#" title="Haut de page" class="scrollup"><i class="fa fa-arrow-up"></i></a>
+    </main>
+    <footer>
+        <p><span class="span-footer">autocomplétion</span> @2020 - Céline Pawlak & Martin Bozon</p>
+    </footer>
 </body>
 </html>

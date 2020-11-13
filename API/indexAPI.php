@@ -72,7 +72,7 @@ if(isset($_GET['param']) && $_GET['param']=='getelement')
 
         if(empty($isInBdd))
             {
-                array_push($error, 'Pas la REF');               
+                array_push($error, 'Cette référence n\'existe pas dans notre base de données');               
             }
         if(!filter_var($id, FILTER_VALIDATE_INT))
             {
@@ -93,6 +93,7 @@ if(isset($_GET['param']) && $_GET['param']=='getelement')
             }
         else
             {                
+                array_push($error, randomSuggest($pdo, $id, 3, 'games'));  
                 $json = json_encode($error);
                 echo $json;
             }                
