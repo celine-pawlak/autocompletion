@@ -1,184 +1,255 @@
 html, body {
     margin: 0;
     min-height: 100vh;
-    background-color: #444444;
 }
-main    
-    {
-        min-height: 100vh;
-    }
-.container
-    {
-        width: 70%;  
-        padding-right: 15px;
-        padding-left: 15px;
-        margin-right: auto;
-        margin-left: auto;    
-        background-color: white;  
-    }
-.lead 
-    {
-        font-size: 1.25rem;
-        font-weight: 300;
-    }
-/* CELINE */
-.flex-column{
-    display: flex;
-    flex-direction: column;
+*{
+    font-family: Verdana;
+    box-sizing: border-box;
 }
-.w-100{
-    width: 100%;
+h1,h2,h3,h4,h5,h6{
+    font-weight: inherit;
 }
-.clickable{
-    cursor: pointer;
-}
-/* INDEX */
-#main-index {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+body {
     min-height: 100vh;
 }
+
+.container {
+    width: 70%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+/* CELINE */
+.m-auto{
+    margin: auto;
+}
+.my-auto{
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.absolute{
+    position: absolute;
+}
+.relative{
+    position: relative;
+}
+.max-width-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#search_results{
+    top: 50vh;
+    border: 1px solid #FF5500;
+    border-top: none;
+    width: 74%;
+    border-radius: 30px;
+}
+.game_input{
+    background-color: #FFFFFF;
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    border:none;
+    border-bottom: 1px solid #474747;
+    text-align: left;
+    color: #FF5500;
+}
+
+.background-black {
+    background-color: #000000;
+}
+.background-white{
+    background-color: #FFFFFF;
+}
+.background-dark-grey{
+    background-color: #444444;
+}
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.h-10vh {
+    height: 10vh;
+}
+.h-90vh {
+    height: 90vh;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+.w-90 {
+    width: 90%;
+}
+.w-80 {
+    width: 80%;
+}
+.w-70 {
+    width: 70%;
+}
+.h-100{
+    height: 100%;
+}
+.p-1{
+    padding: 1rem;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.orange-text {
+    color: #FF5500;
+}
+
+.text-white {
+    color: white;
+}
+
+.no-background {
+    background-color: inherit;
+}
+
+.no-border {
+    border: none;
+}
+
+/* INDEX */
 
 #main-index h1 {
     font-size: 60px;
     font-weight: bold;
     margin: 5vh 0;
-    color: orange;
-}
-
-#section-search-index {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 15vh;
-    width: 80%;
-    font-size: 30px;
-    border-radius: 20px;
-}
-#section-search-index > input {
-    border: 1px solid black;
-}
-
-#section-search-index:hover {
-    box-shadow: 5px 5px 10px grey;
 }
 
 #search {
-    height: 80%;
-    width: 80%;
-    font-size: 30px;
-    margin: 0 2vw;
-    border: 0;
-    border-radius: 20px;
+    border: none;
+    border-bottom: 3px solid #FF5500;
     outline: none;
 }
-#button_index {
-    height: 5vh;
-    border-radius: 20px;
-    outline: none;
-    color: orange;
-    background-color: #444444;
-}
+
+
 /* FIN INDEX */
 /* ELEMENT */
-#section_element
-    {
+#section_element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: auto;
+}
+
+#titre_jeu {
+    font-size: 35px;
+    margin-bottom: 10vh;
+}
+
+#article_element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    width: 100%;
+}
+
+#article_element p {
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    width: 40%;
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+
+}
+
+@media screen and (max-width: 640px) {
+    #article_element {
         display: flex;
-        flex-direction: column;        
-        align-items: center;        
-        min-height: auto;
-    }
-#titre_jeu
-    {
-        font-size: 35px;
-        margin-bottom: 10vh;
-    }
-#article_element
-    {
-        display: flex;
-        flex-direction: row;        
+        flex-direction: column-reverse;
         justify-content: space-around;
-        text-align: center;
+        align-items: center;
+        /* text-align: center; */
         width: 100%;
     }
-#article_element p 
-    {
-        display: flex;
-        align-items: center;
-        font-style: italic;        
-        width: 40%;
+
+    #article_element p {
+        margin-top: 3vh;
     }
-@media screen and (min-width: 600px) and (max-width: 900px)
-    {
-        
-    }
-@media screen and (max-width: 640px)
-    {
-        #article_element
-            {
-                display: flex;
-                flex-direction: column-reverse;        
-                justify-content: space-around;
-                align-items: center;
-                /* text-align: center; */
-                width: 100%;
-            }
-        #article_element p 
-            {
-                margin-top: 3vh;
-            }
-    }
-#suggestion section
-    {
-        display: flex;    
-        justify-content: space-evenly;    
-    }
+}
+
+#suggestion section {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* FIN ELEMENT */
 /* HEADER */
-header
-    {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        background-color: black;
-    }
-#nom_jeu
-    {
-        display: flex;
-        align-items: center;
-    }
-.fa-gamepad
-    {
-        display: flex;
-        align-items: center;
-        font-size: 45px;        
-        color: #FF5500;
-    }
-.fa-search
-    {
-        display: flex;
-        align-items: center;
-        font-size: 30px;        
-        color: #FF5500;
-    }
-#nom_jeu h4
-    {
-        font-size: 40px;
-        margin: 3vh 0;
-        color: #FF5500;
-    }
-#titre-partie
-    {
-        color: white;
-    }
-#search_barre
-    {
-        border: 0;
-        outline: none;
-        border-bottom: 3px solid #FF5500;
-        background-color: black;
-        color: white;
-        font-size: 25px;
-    }
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+}
+
+#nom_jeu {
+    display: flex;
+    align-items: center;
+}
+
+.fa-gamepad {
+    display: flex;
+    align-items: center;
+    font-size: 45px;
+    color: #FF5500;
+}
+
+.fa-search {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: #FF5500;
+}
+
+#nom_jeu h4 {
+    font-size: 40px;
+    margin: 3vh 0;
+    color: #FF5500;
+}
+
+#titre-partie {
+    color: white;
+}
+
+#search_barre {
+    border: 0;
+    outline: none;
+    border-bottom: 3px solid #FF5500;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+}
+
 /* FIN HEADER */

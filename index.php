@@ -13,15 +13,23 @@
     <title>Document</title>
 </head>
 <body>
-    <main id="main-index">
-        <h1>Nom du site</h1>
-        <section id="section-search-index">
-            <input type="search" id="search" name="search">
-            <button id="button_index">Rechercher</button>
-        </section>
-        <section class="flex-column w-100" id="search_results">
-            <input value="test" disabled>
-        </section>
-    </main>
+<header class="background-black">
+    <div class="max-width-content flex-row h-10vh align-items-center justify-content-center w-100">
+        <i class="fas fa-gamepad"></i>
+        <h1 class="text-white"><?= '&nbsp' ?>Game<span class="orange-text">Search</span></h1>
+    </div>
+</header>
+<main id="main-index" class="background-dark-grey">
+    <div class="max-width-content background-white h-90vh w-100">
+        <div id="section-search-index"
+             class="flex-row justify-content-center align-items-center relative h-100">
+            <input type="search" id="search" name="search" class="w-70 p-1"><?= '&nbsp' ?>
+            <i class="no-border background-white clickable orange-text fas fa-search" id="button_index"></i>
+            <section class="flex-column w-100 absolute" id="search_results">
+            </section>
+        </div>
+
+    </div>
+</main>
 </body>
 </html>

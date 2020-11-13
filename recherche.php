@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="ressources/CSS/style.css">
     <title></title>
 </head>
-<body>    
+<body class="background-dark-grey">
     <header>
         <section id="nom_jeu">
             <i class="fas fa-gamepad" id="logo-manette"></i>&nbsp;            
@@ -24,7 +24,9 @@
         </section>
     </header>    
     <main class="container">
-        
+        <section id="recherche-games">
+            <article id="">Test</article>
+        </section>
     </main>
 </body>
 </html>

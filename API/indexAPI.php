@@ -45,7 +45,7 @@ function randomSuggest ($pdo, $id, $nombre, $table)
     }
 
     
-if (isset($_GET['param']) and $_GET['param'] == 'searchbar') {
+if (isset($_GET['param']) and ($_GET['param'] == 'searchbar' or $_GET['param'] == 'search')) {
     if (!isset($allgames)) {
         $allgames = $pdo->query("SELECT * FROM games")->fetchAll(PDO::FETCH_ASSOC);
         $search = strtolower($_POST['search']);
