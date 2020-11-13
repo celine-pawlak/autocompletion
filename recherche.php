@@ -27,10 +27,10 @@
         <section id="recherche-games" class="flex-column">
             <article id="" class="flex-row my-1">
                 <img src="" width="97" class="mx-1">
-                <div class="flex-1 px-1">
+                <div class="flex-1 px-1 flex-column">
                     <h2>Titre jeu</h2>
                     <p>Description du jeu avec un nombre de caracère maximum...</p>
-                    <hr>
+                    <hr class="flex-1 w-100">
                 </div>
             </article>
         </section>

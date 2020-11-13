@@ -77,12 +77,12 @@ $(function () {
 			console.log(data);
 			$('#recherche-games').html('');
 			for (let i = 0; (i < data.length) && (i < 5); i++) {
-				let gameResult = "<article id=\"?jeuid=" + data[i].id + "\" class=\"flex-row my-1\">\n" +
-					"                <img src=\"images/" + data[i].path + "\" width=\"97\" class=\"mx-1\">\n" +
-					"                <div class=\"flex-1 px-1\">\n" +
-					"                    <h2>" + data[i].name + "</h2>\n" +
-					"                    <p>" + data[i].description + "</p>\n" +
-					"                    <hr>\n" +
+				let gameResult = "<article id=\"?jeuid=" + data[i].id + "\" class=\"flex-row my-05 py-1 clickable game-search\">\n" +
+					"                <img class='image-search-result ml-1' src=\"images/" + data[i].path + "\" width=\"97\" class=\"mx-1\">\n" +
+					"                <div class=\"flex-1 px-1 flex-column justify-content-between\">\n" +
+					"                    <h2 class='orange-text'>" + data[i].name + "</h2>\n" +
+					"                    <p class='text-justify grey-text'>" + data[i].description + "</p>\n" +
+					"                    <hr class=' w-100 separated-line-game'>\n" +
 					"                </div>\n" +
 					"            </article>";
 				$('#recherche-games').append(gameResult);
