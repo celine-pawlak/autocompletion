@@ -4,7 +4,7 @@ function redirectGame() {
 	window.location = "element.php" + id_game;
 }
 
-function redirectSearch(searchValue){
+function redirectSearch(searchValue) {
 	window.location = "recherche.php" + searchValue;
 }
 
@@ -25,14 +25,14 @@ function isEnterPressed() {
 
 function catchLink(param) {
 	var vars = {};
-	window.location.href.replace( location.hash, '' ).replace(
+	window.location.href.replace(location.hash, '').replace(
 		/[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
-		function( m, key, value ) { // callback
+		function (m, key, value) { // callback
 			vars[key] = value !== undefined ? value : '';
 		}
 	);
 
-	if ( param ) {
+	if (param) {
 		return vars[param] ? vars[param] : null;
 	}
 	return vars;
@@ -56,13 +56,13 @@ $(function () {
 	})
 	$('#search_results').on('click', '.game_input', redirectGame);
 	$('#button_index').click(function () {
-		if (isSearchFilled()){
+		if (isSearchFilled()) {
 			let searchValue = '?search=' + $('#search').val();
 			redirectSearch(searchValue);
 		}
 	});
 	$(document).keypress(function () {
-		if (isEnterPressed() && isSearchFilled()){
+		if (isEnterPressed() && isSearchFilled()) {
 			let searchValue = '?search=' + $('#search').val();
 			window.location = "recherche.php" + searchValue;
 		}
@@ -75,6 +75,18 @@ $(function () {
 		dataType: "json",
 		success: (data) => {
 			console.log(data);
+			$('#recherche-games').html('');
+			for (let i = 0; (i < data.length) && (i < 5); i++) {
+				let gameResult = "<article id=\"?jeuid=" + data[i].id + "\" class=\"flex-row my-1\">\n" +
+					"                <img src=\"images/" + data[i].path + "\" width=\"97\" class=\"mx-1\">\n" +
+					"                <div class=\"flex-1 px-1\">\n" +
+					"                    <h2>" + data[i].name + "</h2>\n" +
+					"                    <p>" + data[i].description + "</p>\n" +
+					"                    <hr>\n" +
+					"                </div>\n" +
+					"            </article>";
+				$('#recherche-games').append(gameResult);
+			}
 		}
 	})
 });

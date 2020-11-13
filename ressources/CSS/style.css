@@ -8,8 +8,9 @@ html, body {
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     font-weight: inherit;
+    margin: inherit;
 }
 
 body {
@@ -56,6 +57,21 @@ img {
 .my-auto {
     margin-bottom: auto;
     margin-top: auto;
+}
+
+.my-1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mx-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.px-1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .absolute {
@@ -112,6 +128,10 @@ img {
     flex-direction: row;
 }
 
+.flex-1 {
+    flex-grow: 1;
+}
+
 .h-10vh {
     height: 10vh;
 }
@@ -126,6 +146,10 @@ img {
 
 .justify-content-center {
     justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
 }
 
 .w-100 {

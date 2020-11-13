@@ -16,7 +16,7 @@
     <header>
         <section id="nom_jeu">
             <i class="fas fa-gamepad" id="logo-manette"></i>&nbsp;            
-            <h4><span id="titre-partie">Game</span> Search</h4>
+            <h1><span id="titre-partie">Game</span> Search</h1>
         </section>
         <section>
             <input type="search" id="search_barre" name="search_barre">
@@ -24,8 +24,15 @@
         </section>
     </header>    
     <main class="container">
-        <section id="recherche-games">
-            <article id="">Test</article>
+        <section id="recherche-games" class="flex-column">
+            <article id="" class="flex-row my-1">
+                <img src="" width="97" class="mx-1">
+                <div class="flex-1 px-1">
+                    <h2>Titre jeu</h2>
+                    <p>Description du jeu avec un nombre de caracère maximum...</p>
+                    <hr>
+                </div>
+            </article>
         </section>
     </main>
 </body>
