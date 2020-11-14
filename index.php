@@ -14,16 +14,16 @@
 </head>
 <body>
 <header class="background-black">
-    <div class="max-width-content flex-row h-10vh align-items-center justify-content-center w-100">
+    <div id="logo-gamesearch" class="max-width-content flex-row h-10vh align-items-center justify-content-center w-100 clickable">
         <i class="fas fa-gamepad"></i>
-        <h1 class="text-white"><?= '&nbsp' ?>Game<span class="orange-text">Search</span></h1>
+        <h1 class="text-white no-margin"><?= '&nbsp' ?>Game<span class="orange-text">Search</span></h1>
     </div>
 </header>
 <main id="main-index" class="background-dark-grey">
-    <div class="max-width-content background-white h-90vh w-100">
+    <div class="max-width-content background-white h-90vh">
         <div id="section-search-index"
-             class="flex-row justify-content-center align-items-center relative h-100">
-            <input type="search" id="search" name="search" class="w-70 p-1"><?= '&nbsp' ?>
+             class="relative flex-row justify-content-center align-items-center w-70 pt-40vh mx-auto">
+            <input type="search" id="search" name="search" class="w-90"><?= '&nbsp' ?>
             <i class="no-border background-white clickable orange-text fas fa-search" id="button_index"></i>
             <section class="flex-column w-100 absolute" id="search_results">
             </section>

@@ -14,38 +14,20 @@ h1, h2, h3, h4, h5, h6, p {
     margin: inherit;
 }
 
-h2{
+h1 {
+    font-size: 40px;
+}
+
+h2 {
     font-size: 20px;
 }
-p{
+
+p {
     font-size: 16px;
 }
 
 body {
     min-height: 100vh;
-}
-
-.container {
-    width: 70%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: white;
-}
-
-.lead {
-    font-size: 1.25rem;
-    font-weight: 300;
-}
-
-.container {
-    width: 70%;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: white;
 }
 
 .lead {
@@ -58,36 +40,59 @@ img {
 }
 
 /* CELINE */
-.game-search{
+
+.w650-px {
+    width: 650px;
+}
+
+.game-search {
     border-radius: 10px;
     border: 1px solid transparent;
 }
-.game-search:hover{
+
+.game-search:hover {
     border: 1px solid #FF5500;
 }
-.game-search img{
+
+.game-search img {
     border-radius: 10px;
 }
-.game-search:hover img{
+
+.game-search:hover img {
     transform: scale(1.05);
 }
-.game-search:hover p{
+
+.game-search:hover p {
     color: black;
 }
-.image-search-result{
-    border:1px solid #474747;
+
+.image-search-result {
+    border: 1px solid #474747;
     box-shadow: none;
 }
-.text-justify{
+
+.text-justify {
     text-align: justify;
 }
+
 .separated-line-game {
     border: none;
     border-bottom: 1px solid #474747;
 }
 
+.no-margin {
+    margin: unset;
+}
+
 .m-auto {
     margin: auto;
+}
+.m-50-15 {
+    margin: 50% 15%;
+}
+
+.pt-40vh{
+    padding-top: 40vh;
 }
 
 .my-auto {
@@ -99,28 +104,44 @@ img {
     margin-top: .5rem;
     margin-bottom: .5rem;
 }
+
 .my-1 {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
 
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
 .mx-1 {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-.ml-1{
+
+.ml-1 {
     margin-left: 1rem;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
 }
 
 .px-1 {
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+.pt-1 {
+    padding-top: 1rem;
+}
+
 .py-1 {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-.pl-1{
+
+.pl-1 {
     padding-left: 1rem;
 }
 
@@ -142,11 +163,12 @@ img {
 }
 
 #search_results {
-    top: 50vh;
-    border: 1px solid #FF5500;
-    border-top: none;
-    width: 74%;
+    top: 100%;
+    width: 70%;
+    left: 5%;
     border-radius: 30px;
+    background-color: #FFFFFF;
+    z-index: 3;
 }
 
 .game_input {
@@ -158,6 +180,17 @@ img {
     border-bottom: 1px solid #474747;
     text-align: left;
     color: #FF5500;
+}
+
+.game_no_result {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    text-align: left;
+    color: #474747;
+    font-size: 14px;
 }
 
 .background-black {
@@ -190,6 +223,9 @@ img {
     height: 10vh;
 }
 
+.h-50vh {
+    height: 50vh;
+}
 .h-90vh {
     height: 90vh;
 }
@@ -237,6 +273,7 @@ img {
 .orange-text {
     color: #FF5500;
 }
+
 .grey-text {
     color: grey;
 }
@@ -457,15 +494,6 @@ header {
     color: white;
 }
 
-#search_barre {
-    border: 0;
-    outline: none;
-    border-bottom: 3px solid #FF5500;
-    background-color: black;
-    color: white;
-    font-size: 25px;
-}
-
 @media screen and (max-width: 640px) {
     .fa-gamepad {
         font-size: 25px;
@@ -484,10 +512,6 @@ header {
         color: #FF5500;
     }
 
-    #search_barre {
-        width: 25vw;
-        font-size: 15px
-    }
 }
 
 /* FIN HEADER */
