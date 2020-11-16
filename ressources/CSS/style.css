@@ -14,10 +14,6 @@ h1, h2, h3, h4, h5, h6, p {
     margin: inherit;
 }
 
-h1 {
-    font-size: 40px;
-}
-
 h2 {
     font-size: 20px;
 }
@@ -31,7 +27,6 @@ body {
 }
 
 .lead {
-    font-size: 1.25rem;
     font-weight: 300;
     font-style: normal !important;
     text-align: justify;
@@ -42,6 +37,106 @@ img {
 }
 
 /* CELINE */
+main{
+    min-height: 90vh;
+}
+.elementSug{
+    cursor: pointer;
+}
+button:focus{
+    outline: none;
+}
+
+#article_element img{
+    margin-left: 2rem;
+    margin-right: 1rem;
+}
+#article_element p{
+    margin-left: 1rem;
+    margin-right: 2rem;
+    flex:1;
+}
+
+@media screen and (min-width: 1001px){
+    .fa-gamepad, #logoGameSearch{
+        font-size: 45px;
+    }
+    .fa-search{
+        font-size: 26px;
+    }
+    .max-width-content{
+        max-width:  1000px;
+        margin: 0 auto;
+    }
+    #search_results {
+        width: 70%;
+        left: 5%;
+    }
+    .lead, .elementSug{
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 601px) and (max-width: 1000px){
+    .fa-gamepad, #logoGameSearch{
+        font-size: 40px;
+    }
+    .fa-search{
+        font-size: 24px;
+    }
+    .max-width-content{
+        max-width:  600px;
+        margin: 0 auto;
+    }
+    #search_results {
+        width: 100%;
+        left: 0%;
+    }
+    p{
+        font-size: 14px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .lead, .elementSug{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 600px){
+    .fa-gamepad, #logoGameSearch{
+        font-size: 26px;
+    }
+    .fa-search{
+        font-size: 22px;
+    }
+    .max-width-content, h1{
+        max-width:  350px;
+        margin: 0 auto;
+    }
+    #search_results {
+        width: 100%;
+        left: 0%;
+    }
+    .game-search{
+        flex-direction: column !important;
+    }
+    .image-search-result{
+        width: 50px;
+    }
+    p{
+        font-size: 10px;
+    }
+    .lead, .elementSug{
+        font-size: 14px;
+        margin: 0 auto !important;
+    }
+    #article_element img{
+        margin: 1rem auto;
+        width: 80%;
+    }
+    h2{
+        font-size: 16px;
+    }
+}
 
 
 .justify-content-flexend{
@@ -171,15 +266,8 @@ img {
     position: relative;
 }
 
-.max-width-content {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
 #search_results {
     top: 100%;
-    width: 70%;
-    left: 5%;
     border-radius: 30px;
     background-color: #FFFFFF;
     z-index: 3;
@@ -331,6 +419,7 @@ img {
 #titre_jeu {
     font-size: 35px;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 #article_element {
@@ -398,15 +487,15 @@ img {
 
     #article_element p {
         margin-top: 3vh;
-        width: 70%;
+        width: 85%;
     }
 
     #suggestion section {
         flex-direction: column;
     }
 
-    img {
-        width: 30vw;
+    #suggestion img {
+        width: 80%;
     }
 
     #titre_jeu {
@@ -419,7 +508,6 @@ img {
     justify-content: space-evenly;
     /* align-items: center; */
     padding-bottom: 2rem;
-    padding-top: 2rem;
 }
 
 #suggestion section div {
@@ -431,10 +519,10 @@ img {
 .text-align-center{
     text-align: center;
 }
-.elementSug {
+#section-suggestions p {
     text-align: center;
-    font-size: 25px;
-    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .scrollup {
@@ -483,16 +571,10 @@ header {
 }
 
 .fa-gamepad {
-    display: flex;
-    align-items: center;
-    font-size: 45px;
     color: #FF5500;
 }
 
 .fa-search {
-    display: flex;
-    align-items: center;
-    font-size: 30px;
     color: #FF5500;
 }
 
@@ -507,16 +589,6 @@ header {
 }
 
 @media screen and (max-width: 640px) {
-    .fa-gamepad {
-        font-size: 25px;
-    }
-
-    .fa-search {
-        display: flex;
-        align-items: center;
-        font-size: 20px;
-        color: #FF5500;
-    }
 
     #nom_jeu h4 {
         font-size: 20px;
@@ -535,6 +607,9 @@ footer {
     height: 8vh;
     background-color: black;
     color: white;
+}
+footer p{
+    text-align: center;
 }
 
 .span-footer {

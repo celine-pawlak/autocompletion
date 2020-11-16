@@ -20,7 +20,7 @@
         <div id="logo-gamesearch"
              class="max-width-content flex-row h-10vh align-items-center justify-content-center w-100 clickable">
             <i class="fas fa-gamepad"></i>
-            <h1 class="text-white no-margin"><?= '&nbsp' ?>Game<span class="orange-text">Search</span></h1>
+            <h1 id="logoGameSearch" class="text-white no-margin"><?= '&nbsp' ?>Game<span class="orange-text">Search</span></h1>
         </div>
     </div>
     <div class="background-dark-grey w-100">
