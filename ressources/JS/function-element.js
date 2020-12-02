@@ -50,8 +50,7 @@ function ajax($page, $type, $val, $param, $isset) {
 			type: $type,
 			data: {id: $val, param: $param},
 			dataType: 'json',
-			success: (data) => {
-				console.log(data);
+			success: (data) => {				
 				//Si l'id existe alors on affiche l'élément
 				if (data[1] === true) {
 					$('#titre_jeu').html(data[0].name);
